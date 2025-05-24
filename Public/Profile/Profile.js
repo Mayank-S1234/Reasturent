@@ -50,8 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (becomeMember) {
       becomeMember.textContent = verifiedUserName;
     } else {
-      console.warn(".userName element not found on the page."); // चेतावनी लॉग करें
-      // becomeMember.textContent = " "; // यह लाइन हटा दें
+      console.warn(".userName element not found on the page."); 
     }
   }
 });
@@ -82,7 +81,7 @@ async function handleLogout() {
       console.log("Server logout response:", data.message);
       localStorage.removeItem("jwt_token"); //Remove Token From client Side
       console.log("JWT token removed from client storage.");
-      alert(data.message); // यूजर को सक्सेस मैसेज दिखाएं
+      alert(data.message); 
       window.location.reload();
       window.location.href = "../index.html";
     } else {
@@ -99,5 +98,4 @@ async function handleLogout() {
   }
 }
 
-// अपने लॉगआउट बटन के onclick इवेंट पर इस फंक्शन को कॉल करें
-// <button onclick="handleLogout()">Logout</button>
+
