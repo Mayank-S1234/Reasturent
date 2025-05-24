@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resturant Management Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Menu/menu.css">
+    <link rel="stylesheet" href="Countdown/count.css">
+    <link rel="stylesheet" href="Become a Franchisee/become.css">
+    <link rel="stylesheet" href="Testimonial/client.css">
+    <link rel="stylesheet" href="Near Restaurent/near.css">
+    <link rel="stylesheet" href="Footer/footer.css">
+</head>
+<body>
+    <!-- Navbar Starting... -->
+    <header id="welcome">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#welcome">Welcome</a></li>
+                <li><a href="#menu">Our Menu</a></li>
+                <li><a href="#Franchise">Franchise</a></li>
+                <li><a href="Contact With Us/contact.html">Contact</a></li>
+            </ul>
+            <div>
+                <img src="Images/Logo.png" alt="Logo">
+            </div>
+            <div class="icons">
+                <div class="icons1">
+                    <i class="fa fa-cart-plus cart-icon" id="navbar-cart-icon"></i>
+                    <span class="cart-counter">0</span>
+                </div>
+                
+                <!-- Cart Dropdown -->
+                <div class="cart-dropdown">
+                    <div class="cart-items"></div>
+                </div>
+    
+                <!-- Search Icon + Input -->
+                <div class="search-box" id="searchBox">
+                    <i id="searchIcon"  class="fa fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search...">
+                    <span id="searchClear" onclick="document.getElementById('searchInput').value = ''"></span>
+                </div>
+            </div>
+            <div class="navbut">
+                <a href="Bemone a member/member.html" id="memberlink">Become a Member</a>
+            </div>
+        </nav>
+    </header>    
+    <!-- Navbar Ending... -->
+
+    <!-- Page 1 starting... -->
+    <div class="Background1">
+        <div class="heading">
+            <h1>Welcome! <br> We Made Delicious <br> Food for You</h1>
+            <p style="padding: 25px 0px 45px 0px; font-size: 18px;">
+                Panpie, Burgers, And Best <br>
+                Excellent Of Quality Pizza <br>
+                Chicken Sandwich
+            </p>
+            <span id="button2">
+                <a href="#menu">Order Online</a>
+            </span>
+        </div>
+    </div>
+    <!-- Page 1 Ending -->
+
+    <!-- Page 2 Starting... -->
+    <div class="page2">
+        <div class="para1">
+            <h1 class="heading1" style="font-size: 3rem;">Why We are Best Food Maker</h1>
+            <p>We don't just make food - we craft an experience. With a dedication to using only the finest ingredients, each dish is a perfect blend of tradition and innovation, delivering flavors that elevate every meal. Our passion for culinary excellence is reflected in every bite, turning ordinary moments into unforgettable experiences. Whether it's through our commitment to quality or our creative approach to flavor, we stand apart as the best because we don't just feed people - we create joy, one plate at a time.</p>
+        </div>
+
+        <div class="content-container">
+            <aside class="video-container">
+                <div class="video-bg">
+                    <img src="Images/Thumbnail-image.png" class="video-thumbnail" id="videoThumbnail" onclick="playVideo()" alt="Video Thumbnail">
+        
+                    <!-- Play Button -->
+                    <button class="play-button" id="playButton" onclick="playVideo()">▶</button>
+
+                    <video id="videoPlayer" controls>
+                        <source src="Video/Cinematic Restaurant.mp4" type="Video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </aside>
+    
+            <div class="para2">
+                <p><br>
+                    Lord of the Fires is not just a restaurant; it’s an experience crafted for those who appreciate the finest flavors and a mesmerizing dining atmosphere. As soon as you step inside, you are welcomed by the warm glow of fire-lit ambiance, elegant wooden interiors, and an aroma that promises an unforgettable feast. Specializing in flame-grilled perfection, our menu features premium cuts of meat, fresh seafood, and expertly seasoned vegetables, all seared to perfection over an open flame. Every dish is a masterpiece, delivering bold flavors that ignite your senses and leave you craving more. Our chefs, culinary artists in their own right, use only the finest ingredients, ensuring that every bite is a celebration of taste and quality. Whether you’re indulging in our signature smoky ribs, savoring a tender steak grilled to your preference, or enjoying a flavorful fire-roasted vegetarian dish, every plate is designed to impress. Beyond the exquisite food, Lord of the Fires offers top-tier service, with our attentive staff ensuring your every need is met with warmth and professionalism. Our extensive selection of wines and handcrafted cocktails perfectly complements our dishes, elevating your dining experience to a whole new level.
+                    
+                    <span class="more-text">
+                        Whether it’s a romantic dinner, a family gathering, or a special celebration, Lord of the Fires provides an ambiance that is both cozy and sophisticated, making every moment memorable. Experience the best in class dining with us and let the fire guide your senses to pure gastronomic delight.
+                    </span>
+                </p>
+                <button class="read-more-btn" onclick="toggleText()">Read More</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 2 Ending... -->
+
+    <div class="box-container">
+        <!-- Page 3 starting... -->
+        <div class="page3" id="menu">
+            <h1 class="heading2" style="font-size: 3rem;">
+                Our Best & Delicious Menu
+            </h1>
+                <nav class="navbar2" id="navbar2">
+                    <ul>
+                        <li><button class="btn active" data-category="all">All</button></li>
+                        <li><button class="btn" data-category="breads">Breads</button></li>
+                        <li><button class="btn" data-category="chiffon_Rolls">Chiffon Rolls</button></li>
+                        <li><button class="btn" data-category="donuts">Donuts</button></li>
+                        <li><button class="btn" data-category="pastry_Danish">Pastry & Danish</button></li>
+                        <li><button class="btn" data-category="cakes">Cakes</button></li>
+                        <li><button class="btn" data-category="cookies">Cookies</button></li>
+                    </ul>
+                </nav>
+        </div>
+
+        <div class="box">
+            <section class="image-container" id="section1">
+                <div class="item-box">
+                    <img src="Images/img1.png" alt="Naan Burger">
+                    <h1>Naan Burger</h1>
+                    <p>A vegan burger consisting of falafel, greens, tzatziki, harissa sauce, pickled red onions.</p>
+                    <div class="priceCart">
+                        <span>₹ 120</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+                
+                <div class="item-box">
+                    <img src="Images\img2.png" alt="Butter Chicken Taco">
+                    <h1>Butter Chicken Taco</h1>
+                    <p>These Butter Chicken Tacos are an irresistible Indian dinner made with crispy tafu, bathed.</p>
+                    <div class="priceCart">
+                        <span>₹ 140</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="item-box">
+                    <img src="Images\img3.png" alt="Chicken Burger">
+                    <h1>Chicken Burger</h1>
+                    <p>Crispy seasoned chicken breast, topped with a mandatory slice of melted cheese.</p>
+                    <div class="priceCart">
+                        <span>₹ 90</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="item-box">
+                    <img src="Images\img4.png" alt="Cheese Chicken Naan">
+                    <h1>Cheese Chicken Naan</h1>
+                    <p>This Indian-inspired treat takes cheese on toast to new heights.</p>
+                    <div class="priceCart">
+                        <span>₹ 110</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="item-box">
+                    <img src="Images\img5.png" alt="3 Layer Burger">
+                    <h1>3 Layer Burger</h1>
+                    <p>The trick to juicy, flovorful chicken burgers is a really excellent chicken patty.</p>
+                    <div class="priceCart">
+                        <span>₹ 99</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="item-box">
+                    <img src="Images\img6.png" alt="Sandwich">
+                    <h1>Sandwich</h1>
+                    <p>Enjoy these toasted egg and cress club sandwiches as part of a summer family picnic.</p>
+                    <div class="priceCart">
+                        <span>₹ 70</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="more-items">
+                    <div class="item-box">
+                        <img src="Images/img7.png" alt="Stuffed Chessy Garlic Bread">
+                        <h1>Stuffed Cheesy Garlic Bread</h1>
+                        <p>Garlic bread originated in italy but has really been popularized by the american Pizza chains.</p>
+                        <div class="priceCart">
+                            <span>₹ 210</span>
+                            <i class="fa fa-shopping-cart cart-icon""></i>
+                        </div>
+                    </div>
+
+                    
+                    <div class="item-box">
+                        <img src="Images\img8.png" alt="Garlic Bread">
+                        <h1>Garlic Bread</h1>
+                        <p>You may have once struggled with dry or greasy breads reeking of burned or new garlic, but it's time...</p>
+                        <div class="priceCart">
+                            <span>₹ 250</span>
+                            <i class="fa fa-shopping-cart cart-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="item-box">
+                        <img src="Images\img9.png" alt="Great Garlic Bread">
+                        <h1>Great Garlic Bread</h1>
+                        <p>This Italian garlic bread is drenched in garlicky herb butter, oven-baked until crisp & topped.</p>
+                        <div class="priceCart">
+                            <span>₹ 320</span>
+                            <i class="fa fa-shopping-cart cart-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="item-box">
+                        <img src="Images/img10.png" alt="Tear & Share Garlic Bread">
+                        <h1>Tear & Share Garlic Bread</h1>
+                        <p>Impress your guests wit our tear and share garlic bread, featuring Maldon Garlic Sea Salt.</p>
+                        <div class="priceCart">
+                            <span>₹ 220</span>
+                            <i class="fa fa-shopping-cart cart-icon"></i>
+                        </div>
+                    </div>
+            
+                    <div class="item-box">
+                        <img src="Images/img11.png" alt="Vanilla Chiffon Cake">
+                        <h1>Vanilla Chiffon Cake</h1>
+                        <p>Vanilla chiffon roll is a sweet cake with a big vanilla flover.</p>
+                        <div class="priceCart">
+                            <span>₹ 170</span>
+                            <i class="fa fa-shopping-cart cart-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="item-box">
+                        <img src="Images\img12.png" alt="Vanilla Chiffon">
+                        <h1>Vanilla Chiffon</h1>
+                        <p>Vanilla chiffon roll is a sweet cake.</p>
+                        <div class="priceCart">
+                            <span>₹ 150</span>
+                            <i class="fa fa-shopping-cart cart-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="item-box">
+                        <img src="Images\img13.png" alt="Swiss Roll Cake">
+                        <h1>Swiss Roll Cake</h1>
+                        <p>A Swiss Roll Cake. Soft, airy vanilla flovoured sponge rolled.</p>
+                        <div class="priceCart">
+                            <span>₹ 380</span>
+                            <i class="fa fa-shopping-cart cart-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="item-box">
+                        <img src="Images\img14.png" alt="Crispy & Creany Doughnuts">
+                        <h1>Crispy & Creany Doughnuts</h1>
+                        <p>Tastes just the glazed donuts.</p>
+                        <div class="priceCart">
+                            <span>₹ 125</span>
+                            <i class="fa fa-shopping-cart cart-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="item-box">
+                        <img src="Images\img15.png" alt="Chocalate Chip Mini Donuts">
+                        <h1>Chocalate Chip Mini Donuts</h1>
+                        <p>Chocolate Mini Donuts - the perfect easy mini donut, they bake up light, fluffy.</p>
+                        <div class="priceCart">
+                            <span>₹ 100</span>
+                            <i class="fa fa-shopping-cart cart-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="item-box">
+                        <img src="Images\img16.png" alt="Mini Baked Donuts with Vanilla Glaze">
+                        <h1>Mini Baked Donuts with Vanilla Glaze</h1>
+                        <p>Baked donuts are easier to make than the fried varity. These bite-size treats are tossed in vanilla glaze.</p>
+                        <div class="priceCart">
+                            <span>₹ 420</span>
+                            <i class="fa fa-shopping-cart cart-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="item-box">
+                        <img src="Images\img17.png" alt="Doughnuts">
+                        <h1>Doughnuts</h1>
+                        <p>Super delicious donut.</p>
+                        <div class="priceCart">
+                            <span>₹ 60</span>
+                            <i class="fa fa-shopping-cart cart-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="item-box">
+                        <img src="Images\img18.png" alt="Danish Pastry">
+                        <h1>Danish Pastry</h1>
+                        <p>Danish pastry (also called breakfast pastry) from scratch with a variety of wonderful.</p>
+                        <div class="priceCart">
+                            <span>₹ 470</span>
+                            <i class="fa fa-shopping-cart cart-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="item-box">
+                        <img src="Images\img19.png" alt="Miso Caranel-Apple Danish">
+                        <h1>Miso Caranel-Apple Danish</h1>
+                        <p>This apple Danish makes for a lovely fall breakfast or an elegant, eye-catching dessert.</p>
+                        <div class="priceCart">
+                            <span>₹ 590</span>
+                            <i class="fa fa-shopping-cart cart-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="item-box">
+                        <img src="Images/img20.png" alt="Cheese Danish">
+                        <h1>Cheese Danish</h1>
+                        <p>Flaky, buttery Cream Cheese Danish, frozen puff pastry.</p>
+                        <div class="priceCart">
+                            <span>₹ 340</span>
+                            <i class="fa fa-shopping-cart cart-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="item-box">
+                        <img src="Images\img21.png" alt="Cheery Danish">
+                        <h1>Cherry Danish</h1>
+                        <p>Cherry danish is a buttery and flaky pastry made with puff pastry, a creamy sweetend cream cheese.</p>
+                        <div class="priceCart">
+                            <span>₹ 650</span>
+                            <i class="fa fa-shopping-cart cart-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="item-box">
+                        <img src="Images\img22.png" alt="Cheery Cheesecake Danish">
+                        <h1>Cherry Cheesecake Danish</h1>
+                        <p>A braided Cherry Danish is treat for breakfast or dessert any time of the year.</p>
+                        <div class="priceCart">
+                            <span>₹ 560</span>
+                            <i class="fa fa-shopping-cart cart-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="item-box">
+                        <img src="Images/img23.png" alt="Fish Cakes">
+                        <h1>Fish Cakes</h1>
+                        <p>Thes fish cakes make a perfect appetizer, side or burger for a healthy meal.</p>
+                        <div class="priceCart">
+                            <span>₹ 470</span>
+                            <i class="fa fa-shopping-cart cart-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="item-box">
+                        <img src="Images/img24.png" alt="Ice Cream Cake">
+                        <h1>Ice Cream Cake</h1>
+                        <p>This ice cream cake has a generous layer of cake and ice cream.</p>
+                        <div class="priceCart">
+                            <span>₹ 600</span>
+                            <i class="fa fa-shopping-cart cart-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="item-box">
+                        <img src="Images\img25.png" alt="Chocolate Ice Cream Cake">
+                        <h1>Chocolate Ice Cream Cake</h1>
+                        <p>Over the top delicious & decadent, this Chocolate Ice Cream Cake is the ultimate ice cream.</p>
+                        <div class="priceCart">
+                            <span>₹ 850</span>
+                            <i class="fa fa-shopping-cart cart-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="item-box">
+                        <img src="Images\img26.png" alt="Soft Chocalate Chip Cookies">
+                        <h1>Soft Chocolate Chip Cookies</h1>
+                        <p>The Beast soft chocolate chip cookies! No Chilling requires.</p>
+                        <div class="priceCart">
+                            <span>₹ 49</span>
+                            <i class="fa fa-shopping-cart cart-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="item-box">
+                        <img src="Images\img27.png" alt="Oatmeal Cookies">
+                        <h1>Oatmeal Cookies</h1>
+                        <p>This oatmeal cookie yields soft, chewy, bakery-style cookies.</p>
+                        <div class="priceCart">
+                            <span>₹ 99</span>
+                            <i class="fa fa-shopping-cart cart-icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <button class="more-item-seen" onclick="toggleItems()">See All</button>
+            </section>
+            
+            <section id="section2" class="others-category">
+                <div class="item-box" id="bread" data-category="breads">
+                    <img src="Images/img7.png" alt="Stuffed Cheesy Garlic Bread">
+                    <h1>Stuffed Cheesy Garlic Bread</h1>
+                    <p>Garlic bread originated in italy but has really been popularized by the american Pizza chains.</p>
+                    <div class="priceCart">
+                        <span>₹ 210</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="item-box" data-category="breads">
+                    <img src="Images\img6.png" alt="Sandwich">
+                    <h1>Sandwich</h1>
+                    <p>Enjoy these toasted egg and cress club sandwiches as part of a summer family picnic.</p>
+                    <div class="priceCart">
+                        <span>₹ 70</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="item-box" data-category="breads">
+                    <img src="Images\img8.png" alt="Garlic Bread">
+                    <h1>Garlic Bread</h1>
+                    <p>You may have once struggled with dry or greasy breads reeking of burned or new garlic, but it's time...</p>
+                    <div class="priceCart">
+                        <span>₹ 250</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="item-box" data-category="breads">
+                    <img src="Images\img9.png" alt="Great Garlic Bread">
+                    <h1>Great Garlic Bread</h1>
+                    <p>This Italian garlic bread is drenched in garlicky herb butter, oven-baked until crisp & topped.</p>
+                    <div class="priceCart">
+                        <span>₹ 320</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="item-box" data-category="breads">
+                    <img src="Images/img10.png" alt="Tear & Share Garlic Bread">
+                    <h1>Tear & Share Garlic Bread</h1>
+                    <p>Impress your guests wit our tear and share garlic bread, featuring Maldon Garlic Sea Salt.</p>
+                    <div class="priceCart">
+                        <span>₹ 220</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="item-box" data-category="breads">
+                    <img src="Images\img3.png" alt="Chicken Burger">
+                    <h1>Chicken Burger</h1>
+                    <p>Crispy seasoned chicken breast, topped with a mandatory slice of melted cheese.</p>
+                    <div class="priceCart">
+                        <span>₹ 90</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="section3" class="others-category">
+                <div class="item-box" data-category="chiffon_Rolls">
+                    <img src="Images/img11.png" alt="Vanilla Chiffon Cake">
+                    <h1>Vanilla Chiffon Cake</h1>
+                    <p>Vanilla chiffon roll is a sweet cake with a big vanilla flover.</p>
+                    <div class="priceCart">
+                        <span>₹ 170</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="item-box" data-category="chiffon_Rolls">
+                    <img src="Images/img12.png" alt="Vanilla Chiffon">
+                    <h1>Vanilla Chiffon </h1>
+                    <p>Vanilla chiffon roll is a sweet cake.</p>
+                    <div class="priceCart">
+                        <span>₹ 150</span>
+                        <i id="icon2" class="fa fa-shopping-cart"></i>
+                    </div>
+                </div>
+
+                <div class="item-box" data-category="chiffon_Rolls">
+                    <img src="Images\img2.png" alt="Butter Chicken Taco">
+                    <h1>Butter Chicken Taco</h1>
+                    <p>These Butter Chicken Tacos are an irresistible Indian dinner made with crispy tafu, bathed.</p>
+                    <div class="priceCart">
+                        <span>₹ 140</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="item-box" data-category="chiffon_Rolls">
+                    <img src="Images\img13.png" alt="Swiss Roll Cake">
+                    <h1>Swiss Roll Cake</h1>
+                    <p>A Swiss Roll Cake. Soft, airy vanilla flovoured sponge rolled.</p>
+                    <div class="priceCart">
+                        <span>₹ 380</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section4" class="others-category">
+                <div class="item-box" data-category="donuts">
+                    <img src="Images\img1.png" alt="Naan Burger">
+                    <h1>Naan Burger</h1>
+                    <p>A vegan burger consisting of falafel, greens, tzatziki, harissa sauce, pickled red onions.</p>
+                    <div class="priceCart">
+                        <span>₹ 120</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="item-box" data-category="donuts">
+                    <img src="Images\img14.png" alt="Crispy & Creany Doughnuts">
+                    <h1>Crispy & Creany Doughnuts</h1>
+                    <p>Tastes just the glazed donuts.</p>
+                    <div class="priceCart">
+                        <span>₹ 125</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="item-box" data-category="donuts">
+                    <img src="Images\img15.png" alt="Chocalate Chip Mini Donuts">
+                    <h1>Chocalate Chip Mini Donuts</h1>
+                    <p>Chocolate Mini Donuts - the perfect easy mini donut, they bake up light, fluffy.</p>
+                    <div class="priceCart">
+                        <span>₹ 100</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="item-box" data-category="donuts">
+                    <img src="Images\img16.png" alt="Mini Baked Donuts with Vanilla Glaze">
+                    <h1>Mini Baked Donuts with Vanilla Glaze</h1>
+                    <p>Baked donuts are easier to make than the fried varity. These bite-size treats are tossed in vanilla glaze.</p>
+                    <div class="priceCart">
+                        <span>₹ 420</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="item-box" data-category="donuts">
+                    <img src="Images\img5.png" alt="3 Layer Burger">
+                    <h1>3 Layer Burger</h1>
+                    <p>The trick to juicy, flovorful chicken burgers is a really excellent chicken patty.</p>
+                    <div class="priceCart">
+                        <span>₹ 99</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="item-box" data-category="donuts">
+                    <img src="Images\img17.png" alt="Doughnuts">
+                    <h1>Doughnuts</h1>
+                    <p>Super delicious donut.</p>
+                    <div class="priceCart">
+                        <span>₹ 60</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section5" class="others-category">
+                <div class="item-box" data-category="pastry_Danish">
+                    <img src="Images\img4.png" alt="Cheese Chicken Naan">
+                    <h1>Cheese Chicken Naan</h1>
+                    <p>This Indian-inspired treat takes cheese on toast to new heights.</p>
+                    <div class="priceCart">
+                        <span>₹ 110</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="item-box" data-category="pastry_Danish">
+                    <img src="Images\img18.png" alt="Danish Pastry">
+                    <h1>Danish Pastry</h1>
+                    <p>Danish pastry (also called breakfast pastry) from scratch with a variety of wonderful.</p>
+                    <div class="priceCart">
+                        <span>₹ 470</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="item-box" data-category="pastry_Danish">
+                    <img src="Images\img19.png" alt="Miso Caranel-Apple Danish">
+                    <h1>Miso Caranel-Apple Danish</h1>
+                    <p>This apple Danish makes for a lovely fall breakfast or an elegant, eye-catching dessert.</p>
+                    <div class="priceCart">
+                        <span>₹ 590</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="item-box" data-category="pastry_Danish">
+                    <img src="Images/img20.png" alt="Cheese Danish">
+                    <h1>Cheese Danish</h1>
+                    <p>Flaky, buttery Cream Cheese Danish, frozen puff pastry.</p>
+                    <div class="priceCart">
+                        <span>₹ 340</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="item-box" data-category="pastry_Danish">
+                    <img src="Images\img21.png" alt="Cherry Danish">
+                    <h1>Cherry Danish</h1>
+                    <p>Cherry danish is a buttery and flaky pastry made with puff pastry, a creamy sweetend cream cheese.</p>
+                    <div class="priceCart">
+                        <span>₹ 650</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="item-box" data-category="pastry_Danish">
+                    <img src="Images\img22.png" alt="Cherry Cheesecake Danish">
+                    <h1>Cherry Cheesecake Danish</h1>
+                    <p>A braided Cherry Danish is treat for breakfast or dessert any time of the year.</p>
+                    <div class="priceCart">
+                        <span>₹ 560</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section6" class="others-category">
+                <div class="item-box" data-category="cakes">
+                    <img src="Images/img11.png" alt="Vanilla Chiffon Cake">
+                    <h1>Vanilla Chiffon Cake</h1>
+                    <p>Vanilla chiffon roll is a sweet cake with a big vanilla flover.</p>
+                    <div class="priceCart">
+                        <span>₹ 170</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="item-box" data-category="cakes">
+                    <img src="Images\img13.png" alt="Swiss Roll Cake">
+                    <h1>Swiss Roll Cake</h1>
+                    <p>A Swiss Roll Cake. Soft, airy vanilla flovoured sponge rolled.</p>
+                    <div class="priceCart">
+                        <span>₹ 380</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="item-box" data-category="cakes">
+                    <img src="Images/img23.png" alt="Fish Cakes">
+                    <h1>Fish Cakes</h1>
+                    <p>Thes fish cakes make a perfect appetizer, side or burger for a healthy meal.</p>
+                    <div class="priceCart">
+                        <span>₹ 190</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="item-box" data-category="cakes">
+                    <img src="Images/img24.png" alt="Ice Cream Cake">
+                    <h1>Ice Cream Cake</h1>
+                    <p>This ice cream cake has a generous layer of cake and ice cream.</p>
+                    <div class="priceCart">
+                        <span>₹ 600</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="item-box" data-category="cakes">
+                    <img src="Images\img25.png" alt="Chocalate Ice Cream Cake">
+                    <h1>Chocolate Ice Cream Cake</h1>
+                    <p>Over the top delicious & decadent, this Chocolate Ice Cream Cake is the ultimate ice cream.</p>
+                    <div class="priceCart">
+                        <span>₹ 850</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="item-box" data-category="cakes">
+                    <img src="Images\img22.png" alt="Cherry Cheesecake Danish">
+                    <h1>Cherry Cheesecake Danish</h1>
+                    <p>A braided Cherry Danish is treat for breakfast or dessert any time of the year.</p>
+                    <div class="priceCart">
+                        <span>₹ 560</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section7" class="others-category">
+                <div class="item-box" data-category="cookies">
+                    <img src="Images\img15.png" alt="Chocalate Chip Mini Donuts">
+                    <h1>Chocalate Chip Mini Donuts</h1>
+                    <p>Chocolate Mini Donuts - the perfect easy mini donut, they bake up light, fluffy.</p>
+                    <div class="priceCart">
+                        <span>₹ 100</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="item-box" data-category="cookies">
+                    <img src="Images\img26.png" alt="Soft Chocalate Chip Cookies">
+                    <h1>Soft Chocolate Chip Cookies</h1>
+                    <p>The Beast soft chocolate chip cookies! No Chilling requires.</p>
+                    <div class="priceCart">
+                        <span>₹ 190</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+
+                <div class="item-box" data-category="cookies">
+                    <img src="Images\img27.png" alt="Oatmeal Cookies">
+                    <h1>Oatmeal Cookies</h1>
+                    <p>This oatmeal cookie yields soft, chewy, bakery-style cookies.</p>
+                    <div class="priceCart">
+                        <span>₹ 99</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Page 3 Ending... -->
+
+        <!-- Page 4 Starting... -->
+        <div class="countdown-container">
+            <h1>We believe in making quality food</h1>
+            <div class="stats">
+                <div class="stat-item">
+                    <h2 data-target="2" data-suffix="M+">0M+</h2>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="stat-item">
+                    <h2 data-target="98" data-suffix="%">0%</h2>
+                    <p>Customer Satisfaction</p>
+                </div>
+                <div class="stat-item">
+                    <h2 data-target="20" data-suffix="+">+</h2>
+                    <p>Our Branches</p>
+                </div>
+                <div class="stat-item">
+                    <h2 data-target="100" data-suffix="+">0+</h2>
+                    <p>Total Employees</p>
+                </div>
+            </div>
+        </div>       
+
+        <div class="Franchisee-container" id="Franchise">
+            <h1>Start The Adventure Today And <br>
+            Become a Franchisee</h1>
+            <p>
+                Welcome to Lord of the Fires, where bold flavors and sizzling grills reign supreme! Our passion for quality food is unmatched, bringing you the juiciest burgers, perfectly grilled steaks, and smoky, fire-kissed delights that will leave you craving more. 
+                Every bite is a masterpiece, crafted with the finest ingredients and a touch of fiery perfection. Whether you're dining in or grabbing a feast to go, we promise an unforgettable experience with every meal. 
+                Join the kingdom of flavor! Eat like royalty and let the fire guide your taste buds to pure satisfaction.
+                Visit us today & taste the legend! 
+            </p>
+
+            <button class="Franchisee-button">
+                <a href="Become a Franchisee/franchisee.html">Become a Franchisee</a>
+            </button>
+        </div>
+
+        <div class="clients-container">
+            <h1 class="heading3">What Our Clients Are Saying</h1>
+            <div class="avatar-container">
+                <div class="avatar-box">
+                    <div>
+                        <img class="content-img" src="Images/avatar1.jpg" alt="avatar1">
+                        <h2>Prakhar Agarwal</h2>
+                        <p>CEO of Resturant</p>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <img class="symbol" src="Images/symbol1.png" alt="symbol1">
+                    <p class="p2">A warm and inviting atmosphere with friendly staff. The homemade pasta was delicious, though the portion sizes could be bigger. Overall, a great place for a relaxed dinner with family.</p>
+                </div>
+
+                <div class="avatar-box">
+                    <div>
+                        <img class="content-img" src="Images/avatar2.jpg" alt="avatar2">
+                        <h2>Tarun Kaushik</h2>
+                        <p>CEO of Resturant</p>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <img class="symbol" src="Images/symbol1.png" alt="symbol1">
+                    <p class="p2">The freshest seafood I’ve had in a long time! The grilled salmon was perfectly cooked, and the oysters were amazing. Highly recommend for seafood lovers looking for quality and great service.</p>
+                </div>
+
+                <div class="avatar-box">
+                    <div>
+                        <img class="content-img" src="Images/avatar3.jpg" alt="avatar3">
+                        <h2>Lakshay Kaushik</h2>
+                        <p>CEO of Resturant</p>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <img class="symbol" src="Images/symbol1.png" alt="symbol1">
+                    <p class="p2">Decent Indian restaurant with a nice ambiance, but the service was quite slow. The pizza was flavorful, but the pasta lacked seasoning. Might give it another try for a second opinion.</p>
+                </div>
+
+                <div class="avatar-box">
+                    <div>
+                        <img class="content-img" src="Images/avatar4.jpg" alt="avatar4">
+                        <h2>Sumita Sharma</h2>
+                        <p>CEO of Resturant</p>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <img class="symbol" src="Images/symbol1.png" alt="symbol1">
+                    <p class="p2">Great spot for those who love bold flavors! The curries were rich and aromatic, but the spice levels were intense. The naan bread was soft and buttery—one of the best I’ve had.</p>
+                </div>
+
+                <div class="avatar-box">
+                    <div>
+                        <img class="content-img" src="Images/avatar5.jpg" alt="avatar5">
+                        <h2>Mayank Sharma</h2>
+                        <p>CEO of Resturant</p>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <img class="symbol" src="Images/symbol1.png" alt="symbol1">
+                    <p class="p2">A fantastic place for healthy eaters! The smoothie bowls were fresh and colorful, and the quinoa salad was perfectly balanced. Loved the eco-friendly atmosphere and sustainable food choices.</p>
+                </div>
+
+                <div class="avatar-box">
+                    <div>
+                        <img class="content-img" src="Images/avatar6.jpg" alt="avatar6">
+                        <h2>Nitin Rajpoot</h2>
+                        <p class="p1">CEO of Resturant</p>
+                        <div class="stars6">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <img class="symbol" src="Images/symbol1.png" alt="symbol1">
+                    <p class="p2">The ribs were tender and flavorful, but the sides were a bit disappointing. The coleslaw was too dry, and the mac & cheese lacked creaminess. Good for meat lovers but needs improvement.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Page 4 Ending... -->
+
+        <!-- Page 5 Starting... -->
+        <div class="support-container">
+            <h1>For More Support</h1>
+            <div>
+                <input type="email" id="emailInput" placeholder="Enter Email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+                <button class="button3" id="subscribeBtn">Subscribe</button>
+            </div>
+        </div>
+        
+
+        <div class="location-container">
+            <div class="text-container">
+                <h1>Our Restaurants. <br> Where to Find Us?</h1>
+                <p>
+                    want to have a superb meal in an exceptional setting <br> with family, friends or work colleagues, here are the <br> addresses of our restaurants.
+                </p>
+                <br><br>
+                <button class="button4" id="button4">Find The Nearest Cheffest</button>
+            </div>
+
+            <div class="map-container">
+                <iframe 
+                    id="map"
+                    src="https://maps.google.com/maps?q=Taj%20Hotel%20Mumbai&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        <!-- Page 5 Ending... -->
+
+        <!-- Footer Starting... -->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>Our Products</h3> <br>
+                    <ul>
+                        <li><a href="#menu">Our menus</a></li>
+                        <li><a href="#menu">Our burgers</a></li>
+                        <li><a href="Contact With Us/contact.html">Our times sides</a></li>
+                        <li><a href="#menu">Our naandwiches</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal Information</h3>
+                    <ul>
+                        <li><a href="Legal Notice/legal.html">Legal Notice</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3> <br>
+                    <ul>
+                        <li><a href="Contact With Us/contact.html">Contacts</a></li>
+                        <li><a href="Contact With Us/contact.html">Our addresses</a></li>
+                        <li><a href="Become a Franchisee/franchisee.html">Become a Times Square franchisee</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="heading-normal">We Accept</h3>
+                    <div class="payment-icons"> <br>
+                        <img src="Images/mastercard.png" alt="Mastercard">
+                        <img src="Images/visa.png" alt="Visa"> <br> <br>
+                        <img src="Images/amex.png" alt="American Express">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-icons">
+                    <a href="#"><img src="Images/facebook.svg" alt="Facebook"></a>
+                    <a href="#"><img src="Images/twitter.svg" alt="X"></a>
+                    <a href="#"><img src="Images/discord.svg" alt="Discord"></a>
+                    <a href="#"><img src="Images/linkedin.svg" alt="LinkedIn"></a>
+                </div>
+                <p>&copy; 2025 Tarun Kaushik. All rights reserved.</p>
+            </div>
+        </footer>
+        <!-- Footer Ending... -->
+    </div>
+
+    <!-- Include JavaScript -->
+    <script src="script.js"></script>
+    <script src="Menu/menu.js"></script>
+    <script src="Countdown/count.js"></script>
+    <script src="Become a Franchisee/become.js"></script>
+    <script src="Testimonial/client.js"></script>
+    <script src="Near Restaurent/near.js"></script>
+    <script src="Footer/footer.js"></script>
+</body>
+</html>

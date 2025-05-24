@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Become a Franchisee | Lord of the Fires</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: url(../Images/background1.jpg) no-repeat center center/cover;
+            z-index: -1;
+            filter: brightness(0.5);
+        }
+    </style>
+</head>
+<body class="text-white relative">
+    <!-- Header -->
+    <header class="text-center py-12 bg-black bg-opacity-50">
+        <h1 class="text-4xl md:text-6xl font-bold">Become a Franchisee</h1>
+        <p class="text-lg mt-2">Bring the Fire to Your City!</p>
+    </header>
+
+    <!-- Benefits -->
+    <section class="py-12 px-6 md:px-20 bg-black bg-opacity-50">
+        <h2 class="text-3xl font-semibold mb-8 text-center">Why Franchise with Us?</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="p-6 rounded-xl bg-red-700 bg-opacity-60 shadow-lg">
+                <h3 class="text-xl font-bold mb-2">Proven Model</h3>
+                <p>Run a tried-and-tested restaurant concept with high demand.</>
+            </div>
+            <div class="p-6 rounded-xl bg-red-700 bg-opacity-60 shadow-lg">
+                <h3 class="text-xl font-bold mb-2">Marketing Support</h3>
+                <p>Get expert branding and promotional help to grow faster.</p>
+            </div>
+            <div class="p-6 rounded-xl bg-red-700 bg-opacity-60 shadow-lg">
+                <h3 class="text-xl font-bold mb-2">Training & Setup</h3>
+                <p>We guide you at every step, from kitchen setup to staff training.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps -->
+    <section class="py-12 px-6 md:px-20 bg-gray-900 bg-opacity-80">
+        <h2 class="text-3xl font-semibold mb-8 text-center">Steps to Join</h2>
+        <ol class="space-y-4 list-decimal list-inside max-w-2xl mx-auto">
+            <li>Fill the Franchise Inquiry Form</li>
+            <li>Attend a Discovery Call</l>
+            <li>Review Franchise Agreement</li>
+            <li>Launch Your Outlet with Our Help!</li>
+        </ol>
+    </section>
+
+    <!-- Form -->
+    <section class="py-12 px-6 md:px-20 bg-black bg-opacity-60">
+        <h2 class="text-3xl font-semibold mb-8 text-center">Franchise Inquiry Form</h2>
+        <form id="franchiseForm" class="max-w-3xl mx-auto space-y-6" method="post" action="/api/v1/auth">
+            <div class="grid md:grid-cols-2 gap-4">
+                <input type="text" name="name" placeholder="Full Name" required class="p-3 rounded w-full bg-white text-black" />
+                <input type="email" name="email" placeholder="Email Address" required class="p-3 rounded w-full bg-white text-black" />
+                <input type="tel" name="phone" placeholder="Phone Number" required class="p-3 rounded w-full bg-white text-black" />
+                <input type="text" name="city" placeholder="City" required class="p-3 rounded w-full bg-white text-black" />
+            </div>
+            <select name="investment" class="p-3 rounded w-full bg-white text-black">
+                <option value="">Select Investment Range</option>
+                <option value="<10L">Below ₹10 Lakhs</option>
+                <option value="10-25L">₹10 - ₹25 Lakhs</option>
+                <option value=">25L">Above ₹25 Lakhs</option>
+            </select>
+            <textarea name="reason" rows="4" placeholder="Why do you want to become a franchisee?" class="p-3 rounded w-full bg-white text-black" required></textarea>
+            <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-6 rounded" >Submit</button>
+            <p id="successMsg" class="text-green-400 hidden">Thank you! We’ll get back to you soon.</p>
+        </form>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-12 px-6 md:px-20 bg-gray-800">
+        <h2 class="text-3xl font-semibold mb-8 text-center">Frequently Asked Questions</h2>
+        <div class="space-y-4 max-w-3xl mx-auto">
+            <details class="bg-gray-700 p-4 rounded">
+                <summary class="cursor-pointer font-semibold">How much investment is required?</summary>
+                <p class="mt-2">It typically ranges from ₹10-25 Lakhs depending on location and scale.</p>
+            </details>
+            <details class="bg-gray-700 p-4 rounded">
+                <summary class="cursor-pointer font-semibold">Do you help with staff training?</summary>
+                <p class="mt-2">Yes, we provide full training and operational support.</p>
+            </details>
+            <details class="bg-gray-700 p-4 rounded">
+                <summary class="cursor-pointer font-semibold">Can I open multiple outlets?</summary>
+                <p class="mt-2">Absolutely. Multi-unit franchises are welcome based on performance.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- WhatsApp and Map -->
+    <div class="fixed bottom-5 right-5 z-50">
+        <a href="https://wa.me/911234567890" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-12 h-12">
+        </a>
+    </div>
+
+    <section class="w-full h-96">
+        <iframe class="w-full h-full" frameborder="0" style="border:0"
+            src="https://maps.google.com/maps?q=Taj%20Hotel%20Mumbai&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen>
+        </iframe>
+    </section>
+
+    <!-- Form Submission Script -->
+    <script>
+    document.getElementById("franchiseForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        document.getElementById("successMsg").classList.remove("hidden");
+        this.reset();
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Page 5 Starting... */
+.support-container {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 100%;
+    color: black;
+    background-color: white;
+}
+
+.support-container h1 {
+    color: black;
+    font-size: 3.5rem;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 25px;
+}
+
+.support-container div {
+    text-align: center;
+}
+
+.support-container div input {
+    color: black;
+    width: 60vh;
+    text-align: left;
+    font-size: 1.8rem;
+    padding: 20px;
+    border-radius: 50px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    margin-right: 30px;
+    border: 1px solid black;
+}
+
+.button3 {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-top: 25px;
+    font-size: 1.8rem;
+    border-radius: 50px;
+    margin-left: 30px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(9, 9, 9, 0.575);
+    transition: all 0.3s ease-in-out;
+}
+
+.button3:hover {
+    background-color: white;
+    color: black;
+    border: 3px solid black;
+    transform: scale(1.05);
+}
+
+.location-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 95px;
+    padding-right: 95px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.text-container {
+    flex: 1;
+}
+
+.text-container h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.text-container p {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    margin-bottom: 50px;
+}
+
+.button4 {
+    width: 50vh;
+    height: 10vh;
+    color: black;
+    background-color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    text-decoration: none;
+    border: 3px solid #D83A2D;
+    border-radius: 50px;
+    box-shadow: 0px 4px 10px rgba(241, 234, 234, 0.575);
+    transition: all 0.3s ease-in-out;
+}
+
+.button4:hover {
+    color: white;
+    background-color: #D83A2D;
+    border: 3px solid white;
+    transform: scale(1.05);
+}
+
+.map-container iframe {
+    width: 70vh;
+    height: 60vh;
+    margin-right: 70px;
+    border-radius: 10px;
+}
+/* Page 5 Ending...  */

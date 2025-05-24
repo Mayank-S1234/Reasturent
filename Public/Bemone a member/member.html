@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="member.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-containr  sign-up">
+            <form action="/api/v1/auth/register" method="post" id="sign-up form">
+                <h1>Create Account</h1>
+                <input type="text" placeholder="Name" name="userName" id="userName"  autocomplete="userName" required>
+                <input type="email" placeholder="Email" name="email" id="userEmail" autocomplete="email" required>
+                <input type="password" placeholder="Password" name="password" id="userPassword" autocomplete="current-password" required>
+                <button type="button" id="startVerificationButton">Sign up and Verify Email</button>
+            </form>
+        </div>
+
+        <div class="form-containr  sign-in">
+            <form action="/api/v1/auth/login" method="post">
+                <h1>Sign In</h1>
+                <input type="email" placeholder="Email" name="email" autocomplete="email" id="email">
+               <input type="password" placeholder="Password" name="password" autocomplete="current-password" id="password">
+                <a href="../verifyOtp/forgetPassword.html">Forget Your Password</a>
+                <button type="button" id="login">Sign In</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-pannel toggle-left">
+                    <h1>Welcome Back</h1>
+                    <p>Enter your Personal details to use our site specific features</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-pannel toggle-right">
+                    <h1>Hello, Friends!</h1>
+                    <p>Register your personal details to use all of site features</p>
+                    <button class="hidden" id="register">Sign-up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="member.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+h1{
+    display: inline;
+    margin: 5px;
+}
+.userName{
+    color: red;
+}
+#delbtn{
+    color: red;
+}

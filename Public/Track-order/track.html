@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Track Your Order</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f3f3f3;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .track-container {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    .track-container h1 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .track-container input {
+      width: 80%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .track-btn {
+      background-color: #28a745;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .track-btn:hover {
+      background-color: #218838;
+    }
+
+    .order-status {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    .home-link {
+      display: inline-block;
+      margin-top: 25px;
+      color: #007bff;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .home-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="track-container">
+    <h1>Track Your Order</h1>
+    <input type="text" id="orderInput" placeholder="Enter Order Number (e.g., 123456)">
+    <button class="track-btn" onclick="trackOrder()">Track</button>
+
+    <div class="order-status" id="statusDisplay"></div>
+
+    <a class="home-link" href="../index.html">← Return to Home</a>
+  </div>
+
+  <script>
+    function trackOrder() {
+      const orderNumber = document.getElementById("orderInput").value.trim();
+      const statusDisplay = document.getElementById("statusDisplay");
+
+      if (!orderNumber) {
+        statusDisplay.textContent = "Please enter a valid order number.";
+        return;
+      }
+
+      // Simulated status check – replace with actual backend logic as needed
+      statusDisplay.innerHTML = `🕒 Your order <strong>#${orderNumber}</strong> is being prepared.<br>Estimated delivery in <strong>30-45 minutes</strong>.`;
+    }
+  </script>
+</body>
+</html>

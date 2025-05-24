@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    scroll-behavior: smooth;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* CountDown...  */
+/* Added in Page 3... */
+
+.countdown-container {
+    text-align: center;
+    padding: 50px;
+}
+
+.countdown-container h1 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.stat-item {
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 40vh;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 40px;
+}
+
+.stat-item:hover {
+    transform: scale(1.05);
+}
+
+.stat-item h2 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.stat-item p {
+    font-size: 1.2rem;
+    color: #bdb9b9;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    .countdown-container h1 {
+        font-size: 2.5rem;
+    }
+    .stat-item {
+        width: 35vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .countdown-container {
+        padding: 30px;
+    }
+    .countdown-container h1 {
+        font-size: 2rem;
+    }
+    .stats {
+        gap: 20px;
+    }
+    .stat-item {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .countdown-container {
+        padding: 20px;
+    }
+    .countdown-container h1 {
+        font-size: 1.8rem;
+    }
+    .stat-item {
+        width: 100%;
+        padding: 15px;
+    }
+    .stat-item h2 {
+        font-size: 1.5rem;
+    }
+    .stat-item p {
+        font-size: 1rem;
+    }
+}

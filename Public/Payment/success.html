@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment Successful</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #eafbea;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .success-container {
+      text-align: center;
+      background-color: #fff;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in-out;
+      z-index: 1;
+      max-width: 400px;
+    }
+
+    .success-container h1 {
+      font-size: 2.5rem;
+      color: #28a745;
+      margin-bottom: 20px;
+    }
+
+    .success-container p {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .order-summary {
+      font-size: 1rem;
+      margin-bottom: 30px;
+      color: #555;
+    }
+
+    .home-btn, .track-btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #28a745;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+      margin: 5px;
+    }
+
+    .home-btn:hover, .track-btn:hover {
+      background-color: #218838;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @media (max-width: 500px) {
+      .success-container {
+        padding: 30px 20px;
+      }
+
+      .home-btn, .track-btn {
+        width: 100%;
+        margin: 10px 0;
+        font-size: 1rem;
+      }
+
+      .success-container h1 {
+        font-size: 2rem;
+      }
+
+      .success-container p, .order-summary {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="success-container">
+    <h1>🎉 Payment Successful!</h1>
+    <p>Thank you for your purchase.</p>
+
+    <div class="order-summary">
+      Order No: <strong id="order-id">••••••</strong><br>
+      Amount Paid: <strong id="order-amount">₹0.00</strong>
+    </div>
+
+    <a href="../index.html" class="home-btn">Return to Home</a>
+    <a href="../Track-order/track.html" class="track-btn">Track Order</a>
+  </div>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confetti"></canvas>
+
+  <script>
+    // Confetti effect code
+    const canvas = document.getElementById('confetti');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    function random(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    function createParticle() {
+      return {
+        x: random(0, canvas.width),
+        y: random(-canvas.height, 0),
+        size: random(5, 10),
+        speed: random(2, 5),
+        color: `hsl(${Math.floor(random(0, 360))}, 100%, 50%)`,
+      };
+    }
+
+    function initParticles() {
+      for (let i = 0; i < 150; i++) {
+        particles.push(createParticle());
+      }
+    }
+
+    function drawParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        ctx.fillStyle = p.color;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fill();
+        p.y += p.speed;
+        if (p.y > canvas.height) {
+          p.y = -10;
+          p.x = random(0, canvas.width);
+        }
+      });
+      requestAnimationFrame(drawParticles);
+    }
+
+    initParticles();
+    drawParticles();
+
+    // Order ID + Payment Amount
+    const orderId = localStorage.getItem("orderId");
+    document.getElementById("order-id").textContent = orderId || "••••••";  // Fallback if orderId is not found
+
+    // Get amount from localStorage
+    const amount = localStorage.getItem("paidAmount") || "0.00";
+    document.getElementById("order-amount").textContent = `₹${parseFloat(amount).toFixed(2)}`;
+  </script>
+
+</body>
+</html>

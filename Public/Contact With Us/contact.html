@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Lord of the Fires</title>
+  <link rel="stylesheet" href="contact.css" />
+  <!-- Font Awesome CDN for icons -->
+  <!-- Font Awesome 6.5.0 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Tn1tB+3kx1K1ZKL04IOOBxz/2u9L4lvK6RXC5Q9K2NPLZ4Awkct07oHfMZ/q0qNiOm6A8gEiTBiIjU8rwWD2Zw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Background Music -->
+  <audio id="bg-music" loop>
+    <source src="../Video/Audio2.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+  <button id="music-toggle" title="Toggle Music">🎵</button>
+
+  <!-- Language Toggle -->
+  <div class="lang-toggle">
+    <label for="language">Language:</label>
+    <select id="language">
+      <option value="en">English</option>
+      <option value="hi">Hindi</option>
+    </select>
+  </div>
+
+  <div class="contact-page">
+    <div class="hero-section">
+      <h1 data-en="Contact Lord of the Fires" data-hi="लॉर्ड ऑफ द फेयर्स से संपर्क करें">Contact Lord of the Fires</h1>
+      <p data-en="We’re here to serve you with fire and flavor!" data-hi="हम यहाँ स्वाद और आग के साथ सेवा करने के लिए हैं!">We’re here to serve you with fire and flavor!</p>
+    </div>
+
+    <div class="contact-wrapper">
+
+      <!-- Contact Info -->
+      <div class="contact-left">
+        <h2 data-en="Visit Us" data-hi="हमसे मिलें">Visit Us</h2>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Flame Street, Firetown, FT 45678</p>
+        <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+        <p><i class="fas fa-envelope"></i> support@lordofthefires.com</p>
+        <p><i class="fas fa-clock"></i> Mon – Sun | 11:00 AM – 11:00 PM</p>
+
+        <!-- Social -->
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/919876543210" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+
+        <!-- Live Location Map -->
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.299429707838!2d72.82505371485767!3d19.076005887093763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1bfafdf201f%3A0x99e75bd1c8f7a9f6!2sThe%20Taj%20Mahal%20Palace%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1712300000000!5m2!1sen!2sin" 
+            width="100%" 
+            height="250" 
+            style="border:0; border-radius:10px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Contact Form + Reservation -->
+      <div class="contact-right">
+        <h2 data-en="Send a Message" data-hi="संदेश भेजें">Send a Message</h2>
+        <form id="contact-form">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Your Email" required />
+          <textarea id="message" placeholder="Your Message" required></textarea>
+          <button type="submit" class="contact-btn">Send</button>
+          <p id="form-status"></p>
+        </form>
+        <br><br>
+
+        <hr>
+
+        <h2 class="reserve-heading" data-en="Reserve a Table" data-hi="टेबल बुक करें">Reserve a Table</h2>
+        <form id="reservation-form">
+          <input type="text" id="guest-name" placeholder="Your Name" required />
+          <input type="date" id="res-date" required />
+          <input type="time" id="res-time" required />
+          <input type="number" id="guests" placeholder="No. of Guests" required />
+          <button type="submit" class="contact-btn">Reserve</button>
+          <p id="res-status"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- WhatsApp Chat Floating -->
+  <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank" aria-label="WhatsApp Chat">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 448 512">
+      <path d="M380.9 97.1C339.3 55.5 283.2 32 224.1 32 104.8 32 7.7 129.1 7.7 248.3c0 43.8 11.4 86.6 33.1 124.2L0 480l110.2-40.4c36.3 19.9 77.1 30.4 118.8 30.4h.1c119.3 0 216.4-97.1 216.4-216.3 0-59.2-23.1-115.3-64.6-156.6zM224.1 438.7c-35.4 0-70.1-9.6-100.2-27.7l-7.2-4.3-65.3 23.9 22.3-63.5-4.7-7.4c-20.7-32.5-31.6-70.1-31.6-108.6 0-111.2 90.5-201.6 201.7-201.6 53.8 0 104.3 21 142.3 59 38 38 58.9 88.5 58.8 142.4 0 111.2-90.5 201.8-201.8 201.8zm115.1-151.3c-6.3-3.1-37.3-18.4-43.1-20.5-5.8-2.1-10-3.1-14.2 3.1-4.2 6.3-16.3 20.5-20 24.7-3.6 4.2-7.3 4.7-13.6 1.6-36.9-18.4-61-32.8-85.4-74.3-6.5-11.2 6.5-10.4 18.4-34.7 2-4.2 1-7.8-.5-10.9-1.6-3.1-14.2-34.1-19.4-46.8-5.1-12.7-10.3-11-14.2-11-3.6 0-7.8-.5-11.9-.5s-10.9 1.6-16.5 7.8c-5.8 6.3-22 21.5-22 52.6s22.5 61 25.5 65.2c3.1 4.2 44.3 67.4 107.4 94.5 15 6.5 26.6 10.3 35.7 13.1 15 4.7 28.6 4 39.4 2.4 12-1.8 37.3-15.2 42.6-29.9 5.3-14.7 5.3-27.2 3.6-29.8-1.6-2.6-5.8-4.2-12.1-7.3z"/>
+    </svg>
+  </a>
+
+  <script src="contact.js"></script>
+</body>
+</html>

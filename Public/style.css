@@ -1,0 +1,339 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.913);
+    display: flex;
+    justify-content: space-between;
+    padding-left: 65px;
+    padding-right: 65px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar img {
+    height: 70px;
+    border-radius: 10%;
+    display: flex;
+    position: relative;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    padding: 2px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 82px;
+    padding: 25px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    color: orange;
+    transform: scale(1.05);
+}
+
+.icons {
+    color: white;
+    display: flex;
+    gap: 20px;
+    width: auto;
+    height: 34px;
+    margin-left: 20px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    padding: 25px;
+    font-size: 25px;
+    margin-left: 80px;
+    cursor: pointer;
+}
+
+/* Search Box and Icon */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 4px;
+    border-radius: 50px;
+    width: 34px;
+    height: 34px;
+    transition: width 0.5s ease-in-out;
+    overflow: hidden;
+    position: relative; /* This ensures the icon stays visible */
+}
+
+.search-box.active {
+    width: 28vh;
+}
+
+.search-box #searchIcon {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    font-size: 18px;
+    border-radius: 60px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.search-box i::before {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border: 3px solid black;
+    border-radius: 50%;
+    transform: translate(-4px, -4px);
+}
+
+.search-box i::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 12px;
+    background: black;
+    transform: translate(6px, 6px) rotate(315deg);
+}
+
+.search-box #searchInput {
+    position: relative;
+    width: 178px;
+    height: 36px;
+    left: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: width 0.4s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.search-box input {
+    position: absolute;
+    color: black;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+#searchClear {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    right: 10px;
+    cursor: pointer;
+    display: flex;
+    color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchClear::before {
+    position: absolute;
+    content: '';
+    width: 1px;
+    background: black;
+    height: 10px;
+    transform: rotate(45deg);
+}
+
+#searchClear::after {
+    position: absolute;
+    content: '';
+    width: 1px;
+    background: black;
+    height: 10px;
+    transform: rotate(315deg);
+}
+
+/* Cart Dropdown */
+.cart-dropdown {
+    position: absolute;
+    margin-top: 50px;
+    background-color: #191919;
+    color: black;
+    padding: 10px;
+    width: 20vh;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    visibility: visible;
+}
+
+.cart-dropdown.show {
+    display: block;
+}
+
+.icons1 i {
+    font-size: 2rem;
+}
+
+.icons1 span {
+    position: relative;
+    top: -44px;
+    left: 7px;
+}
+
+.cart-counter {
+    background-color: red;
+    font-weight: bold;
+    display: flex;
+    width: 1.5vw;
+    height: 3.5vh;
+    justify-content: center;
+    font-size: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.remove-item {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.navbut {
+    height: 10vh;
+    width: 40vh;
+    padding: 15px 20px 38px 20px;
+    border-radius: 50px;
+    margin-top: 10px;
+    font-size: 1.3rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.navbut a {
+    color: black;
+    height: 8vh;
+    width: 40vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    padding: 15px;
+    font-weight: 500;
+    box-shadow: 0px 4px 10px rgba(241, 234, 234, 0.575);
+    border-radius: 50px;
+    text-decoration: none;
+    border: 3px solid #D83A2D;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbut a:hover {
+    color: white;
+    background-color: #D83A2D;
+    border: 3px solid white;
+    transform: scale(1.05);
+}
+/* Navbar Ending... */
+
+/* Page 1 Starting */
+.Background1 {
+    width: 100%;
+    height: 100%;
+    background-image: url(Images/Background.png);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+}
+
+.heading {
+    padding-top: 130px;
+    font-size: 45px;
+    position: absolute;
+    padding-left: 95px;
+    padding-right: 95px;
+    flex-direction: column;
+}
+
+#button2 a {
+    border: 1px solid white;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-width: 5px;
+    border-radius: 50px;
+    font-weight: bolder;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(241, 234, 234, 0.575);
+    font-size: 1.3rem;
+    position: absolute;
+    border: 3px solid #D83A2D;
+    transition: all 0.3s ease-in-out;
+}
+
+#button2 a:hover {
+    color: white;
+    border: 3px solid white;
+    background-color: #D83A2D;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .navbar {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .search-wrapper.active input {
+        width: 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        gap: 40px;
+    }
+
+    .search-wrapper.active input {
+        width: 120px;
+    }
+}
