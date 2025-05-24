@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 
 
-const secretKey = "357ffggj"; 
+const secretKey = process.env.SECRET_KEY; 
 const jwtauthMiddleware = (req,res,next)=>{
     try{
     //Extract the jwt token from the request header

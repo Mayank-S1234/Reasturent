@@ -1,7 +1,8 @@
 const mongoose =require("mongoose");
 
 //define url for mongoDb
-const mongoUrl = 'mongodb://127.0.0.1:27017/Taarun';
+//const mongoUrl = 'mongodb://127.0.0.1:27017/Taarun';
+const mongoUrl = process.env.DB_URL;
 
 
 //setup mongoDb conection

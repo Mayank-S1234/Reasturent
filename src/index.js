@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 const fs = require('fs');
+require('dotenv').config();
 
 const app = express();
 
@@ -24,8 +25,9 @@ app.use(express.static("Public"));
 app.use("/api/v1/auth/",require("../Routers/login(signup)"));
 app.use("/api/v1/become/", require("../Routers/becomeFranchise"));
 
+const PORT = process.env.PORT;
 //Port where project is run
-app.listen(8001,( )=>{
+app.listen(PORT ,( )=>{
     console.log("port is running ")
 });
 
