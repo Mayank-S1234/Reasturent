@@ -1,8 +1,8 @@
 const mongoose =require("mongoose");
 
 //define url for mongoDb
-const mongoUrl = process.env.LOCAL_URL;
-//const mongoUrl = process.env.DB_URL;
+//const mongoUrl = process.env.LOCAL_URL;
+const mongoUrl = process.env.DB_URL;
 
 //setup mongoDb conection
 mongoose.connect(mongoUrl);
