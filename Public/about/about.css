@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0D0D0D;
+}
+
+/* Page 2 Starting... */
+.page2 {
+    position: absolute;
+    top: 99.9%;
+}
+
+.para1 {
+    font-size: 18px;
+    text-align: center;
+    padding: 20px;
+    padding-left: 95px;
+    padding-right: 95px;
+    padding-bottom: 50px;
+}
+
+.heading1 {
+    text-align: center;
+    padding: 50px;
+    padding-left: 85px;
+    padding-right: 85px; 
+}
+
+.para2 {
+    font-size: 18px;
+    text-align: left;
+    max-width: 55%;
+    padding: 20px;
+    padding-left: 95px;
+    padding-right: 95px;
+}
+
+.more-text {
+    display: none;
+    overflow: visible;
+}
+
+.read-more-btn {
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    padding: 8px;
+    margin-left: 460px;
+    font-size: 20px;
+    font-family: Bahnschrift SemiBold;
+    background-color: #0D0D0D;
+}
+
+.video-container {
+    position: relative;
+    float: right;
+    padding-bottom: 50px;
+}
+
+.video-bg {
+    width: 756px;
+    height: 444px;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-thumbnail {
+    position: absolute;
+    width: 700px;
+    height: 430px;
+    padding: 50px;
+    padding-top: 40px;
+    padding-right: 80px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.play-button {
+    position: absolute;
+    top: 48%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.video-container video {
+    float: right;
+    width: 700px;
+    height: 430px;
+    padding: 50px;
+    padding-top: 20px;
+    padding-right: 80px;
+    display: none;
+}
+/* Page 2 Ending... */
