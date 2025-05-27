@@ -5,8 +5,6 @@ const {
   verifyOtpController,
   logOutController,
 } = require("../controllers/authController");
-const franchicesController = require("../controllers/becomeAFranchics");
-const showcontroller = require("../controllers/showcontroller");
 const {  changePassword ,deleteUserController, forgetpassword } = require("../controllers/userController");
 const { jwtauthMiddleware } = require("../middleware/jsonwebtoken");
 
@@ -32,9 +30,4 @@ router.post("/logout", jwtauthMiddleware , logOutController);
 //Delete Account---------------------
 router.delete("/deleteAccount",jwtauthMiddleware, deleteUserController);
 
-
-//Become a Franchise
-//router.post("/becomeFranchics", franchicesController);
-
-//router.get("/userName", jwtauthMiddleware, showcontroller);
 module.exports = router;

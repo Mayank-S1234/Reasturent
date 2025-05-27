@@ -1,5 +1,4 @@
 const express = require("express");
-const { jwtauthMiddleware } = require("../middleware/jsonwebtoken");
 const { franchicesController, verifyfranchiseController } = require("../controllers/becomeAFranchics");
 
 

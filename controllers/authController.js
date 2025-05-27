@@ -135,15 +135,6 @@ const verifyOtpController = async (req, res) => {
       userName: user.userName,
     };
     const token = generateToken(payload); // Token Generate Function
-    console.log("The Token is: ", token);
-    // // Send Token to the Client
-    // res.cookie("jwt", token, {
-    //   // HTTP-Only  for Cookies
-    //   httpOnly: true, 
-    //   secure: process.env.NODE_ENV === "production",
-    //   maxAge: 24 * 60 * 60 * 1000,
-    //   sameSite: "strict",
-    // });
 
     res.status(200).json({
       success: true,
