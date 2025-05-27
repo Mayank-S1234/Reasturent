@@ -37,8 +37,8 @@ const authController = async (req, res) => {
         );
         existingUser.verificationCode = VerificationCode;
         existingUser.verificationCodeExpires = new Date(
-          Date.now() + 15 * 60 * 1000
-        ); // 15 minutes to expire
+          Date.now() + 5 * 60 * 1000
+        ); // 5 minutes to expire
         await existingUser.save();
         //Do not send JWT
         await sendVerificationCode(email, VerificationCode);

@@ -6,7 +6,7 @@ document.getElementById('verificationForm').addEventListener('submit', async (e)
     const otp = document.getElementById('otp').value; // Take Otp from USer
 
     try {
-        const response = await fetch('/api/v1/become/verify', {
+        const response = await fetch('/api/v1/contact/verify', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, otp })

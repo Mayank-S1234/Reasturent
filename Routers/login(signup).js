@@ -30,7 +30,7 @@ router.post("/change-password", changePassword )
 router.post("/logout", jwtauthMiddleware , logOutController);
 
 //Delete Account---------------------
-router.delete("/deleteAccount", jwtauthMiddleware, deleteUserController);
+router.delete("/deleteAccount",jwtauthMiddleware, deleteUserController);
 
 
 //Become a Franchise

@@ -24,10 +24,9 @@ app.use(express.static("Public"));
 //route
 app.use("/api/v1/auth/",require("../Routers/login(signup)"));
 app.use("/api/v1/become/", require("../Routers/becomeFranchise"));
+app.use("/api/v1/contact/", require("../Routers/contactRoutes"));
 
 const PORT = process.env.PORT;
-//Port where project is run
-app.listen(PORT ,( )=>{
-    console.log("port is running ")
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
 });
-

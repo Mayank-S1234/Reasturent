@@ -7,7 +7,11 @@
   <link rel="stylesheet" href="contact.css" />
   <!-- Font Awesome CDN for icons -->
   <!-- Font Awesome 6.5.0 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Tn1tB+3kx1K1ZKL04IOOBxz/2u9L4lvK6RXC5Q9K2NPLZ4Awkct07oHfMZ/q0qNiOm6A8gEiTBiIjU8rwWD2Zw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Tn1tB+3kx1K1ZKL04IOOBxz/2u9L4lvK6RXC5Q9K2NPLZ4Awkct07oHfMZ/q0qNiOm6A8gEiTBiIjU8rwWD2Zw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+<link rel="icon" href="data:,">
 </head>
 <body>
   <!-- Background Music -->
@@ -66,12 +70,12 @@
       <!-- Contact Form + Reservation -->
       <div class="contact-right">
         <h2 data-en="Send a Message" data-hi="संदेश भेजें">Send a Message</h2>
-        <form id="contact-form">
-          <input type="text" id="name" placeholder="Your Name" required />
-          <input type="email" id="email" placeholder="Your Email" required />
-          <textarea id="message" placeholder="Your Message" required></textarea>
-          <button type="submit" class="contact-btn">Send</button>
-          <p id="form-status"></p>
+        <form id="contact-form" action="api/v1/contact/send"  method="post">
+          <input type="text" id="name" placeholder="Your Name" required name="name"/>
+          <input type="email" id="email" placeholder="Your Email" required  name="email"/>
+          <textarea id="message" placeholder="Your Message" required name="message"></textarea>
+          <button type="submit" class="contact-btn" id="contact-btn">Send</button>
+          <!-- <p id="form-status"></p> -->
         </form>
         <br><br>
 

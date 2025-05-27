@@ -757,7 +757,7 @@
                 Visit us today & taste the legend! 
             </p>
 
-            <button class="Franchisee-button">
+            <button class="Franchisee-button" id="ff-btn">
                 <a href="Become a Franchisee/franchisee.html">Become a Franchisee</a>
             </button>
         </div>
@@ -913,10 +913,30 @@
     </div>
 
     <!-- Include JavaScript -->
-    <script src="script.js"></script>
+    <script src="script.js">
+        //From Server
+document.getElementById("ff-btn").addEventListener("DOMContentLoaded", () => {
+  const jwtToken = localStorage.getItem("jwt_token"); // get Token from server
+
+  if (!jwtToken) {
+    alert("Pleasse Login to use for site Features"); // Send Messge to user
+    window.location.href = "../Bemone a member/member.html"; // Render in Login Page
+  }
+});
+    </script>
     <script src="Menu/menu.js"></script>
     <script src="Countdown/count.js"></script>
-    <script src="Become a Franchisee/become.js"></script>
+    <script src="Become a Franchisee/become.js">
+        //From Server
+document.getElementById("ff-btn").addEventListener("click", () => {
+  const jwtToken = localStorage.getItem("jwt_token"); // get Token from server
+
+  if (!jwtToken) {
+    alert("Pleasse Login to use for site Features"); // Send Messge to user
+    window.location.href = "../Bemone a member/member.html"; // Render in Login Page
+  }
+});
+    </script>
     <script src="Testimonial/client.js"></script>
     <script src="Near Restaurent/near.js"></script>
     <script src="Footer/footer.js"></script>

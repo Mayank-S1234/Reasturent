@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+  
 
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("franchiseFormbtn");
@@ -53,7 +54,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const data = await response.json();
-
+        if (response.status === 401) {
+          // Token expired or invalid
+          localStorage.removeItem("Token"); // Clear token
+          alert("Session expired. Please login again.");
+          window.location.href = "/login.html"; // Redirect to login
+        }
     if (response.ok && data.success) {
       alert(data.message);
       window.location.href = "./otpVerificationFolder/otpVerification.html";
@@ -70,3 +76,9 @@ document.addEventListener("DOMContentLoaded", () => {
  
 }
 });
+
+
+
+        
+
+   

@@ -15,8 +15,8 @@ const jwtauthMiddleware = (req,res,next)=>{
      else{
             //verify the jwt token 
             const decoded = jwt.verify(token, secretKey);
-        //Attach user info to the request object
-        req.user = { _id: decoded.id };
+           //Attach user info to the request object
+            req.user = { _id: decoded.id };
         next();      
         }
     }catch(err){
@@ -35,7 +35,7 @@ if(!secretKey){
 }
 const generateToken = (userData)=>{
     //generate a new jwt token using userData
-    return jwt.sign(userData, secretKey, {expiresIn: "1d"});
+    return jwt.sign(userData, secretKey, )// {expiresIn: "1d"};
 }
 
 module.exports = {jwtauthMiddleware, generateToken};

@@ -56,10 +56,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
+ 
  document.addEventListener('DOMContentLoaded', () => {
         const verifiedUserName = localStorage.getItem('verifiedUserName');
-        const jwtToken = localStorage.getItem('jwt_token'); // या 'jwt_token' जो भी आप उपयोग करते हैं
+        const jwtToken = localStorage.getItem('jwt_token'); 
         if(jwtToken){
         if (verifiedUserName) {
           const becomeMemberLink = document.querySelector('#memberlink');
@@ -74,18 +74,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
-    // document.addEventListener('DOMContentLoaded', () => {
-    //     const authLink = document.getElementById('memberlink');
-    //     const jwtToken = localStorage.getItem('jwtToken'); // या 'jwt_token' जो भी आप उपयोग करते हैं
-
-    //     if (jwtToken) {
-    //         // यदि टोकन मौजूद है, तो उपयोगकर्ता लॉग इन है
-    //         authLink.textContent = 'लॉगआउट';
-    //         authLink.href = '#'; // लॉगआउट फ़ंक्शन को ट्रिगर करने के लिए
-    //         authLink.addEventListener('click', handleLogout); // handleLogout फंक्शन यहां होना चाहिए
-    //     } else {
-    //         // यदि टोकन मौजूद नहीं है, तो उपयोगकर्ता लॉगआउट है
-    //         authLink.textContent = 'लॉगिन';
-    //         authLink.href = 'login_member.html'; // लॉगिन पेज पर रीडायरेक्ट
-    //     }
-    // });
